@@ -1,0 +1,15 @@
+{% extends "store/layout.html" %} {% load static %} {% block link %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+{% endblock %} {% block body %}
+{% block cart %} {% endblock %}
+<div class="container">
+  {% block navbar %} {% endblock %} {% block header %} {% endblock %}
+</div>
+
+{% block popular %} {% endblock %}
+{% block sales %} {% endblock %} 
+{% block footer %} {% endblock %}
+
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock %}

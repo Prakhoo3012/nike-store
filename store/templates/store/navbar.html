@@ -1,0 +1,19 @@
+{% extends "store/cart.html" %} {% load static %} {% block navbar %}
+<nav class="navbar">
+  <div class="nav-logo">
+    <img src="{% static 'images/nikeWhite-logo.png' %}" alt="Logo" id="logo-img">
+  </div>
+  <div class="nav-right-btn">
+    <button class="nav-btn" id="search-btn">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+    <button class="nav-btn" id="heart-btn">
+      <i class="fa-regular fa-heart"></i>
+    </button>
+    <button class="nav-btn" id="cart-bag">
+      <i class="fa-solid fa-bag-shopping"></i>
+      <sub>0</sub>
+    </button>
+  </div>
+</nav>
+{% endblock %}

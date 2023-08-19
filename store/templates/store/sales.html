@@ -1,0 +1,30 @@
+{% extends "store/popular.html" %} {% load static %} {% block sales %}
+<div class="sales">
+  <h1>Top Rated sales</h1>
+  <div class="sales-cards">
+    {% for product in top %}
+    <div class="sales-card">
+      <div class="card-head">
+        <h3 class="white">{{ product.product_name }}</h3>
+        <p class="white">{{ product.product_desc }}</p>
+        <div class="price-rate">
+          <p class="price white bold">{{ product.price }}$</p>
+          <p class="rating white bold">
+            <i class="fa-solid fa-star"></i> {{ product.rate }}
+          </p>
+        </div>
+        <div class="card-btn">
+          <button class="card--btn">
+            <i class="fa-solid fa-bag-shopping"></i>
+          </button>
+          <button class="card--btn bold">Buy Now</button>
+        </div>
+      </div>
+      <div class="sales-img">
+        <img src="/media/{{product.image}}" alt="{{product.product_name}}" />
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
